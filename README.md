@@ -5,8 +5,8 @@ Client library for microservice (Spring Boot)
 1.6+
 
 # MAVEN
-<dependency>
-	<groupId>com.github.ideahut</groupId>
-	<artifactId>sbms-client</artifactId>
-	<version>1.0.0</version>			
-</dependency>
+&lt;dependency&gt;
+	&lt;groupId&gt;com.github.ideahut&lt;/groupId&gt;
+	&lt;artifactId&gt;sbms-client&lt;/artifactId&gt;
+	&lt;version&gt;1.0.0&lt;/version&gt;
+&lt;/dependency&gt;
