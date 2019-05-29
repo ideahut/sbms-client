@@ -7,11 +7,15 @@ import com.github.ideahut.sbms.client.dto.base.DtoStringId;
 @SuppressWarnings("serial")
 public class AuditDto extends DtoStringId {
 
-	private String auditor;
+	private String auditorId;
+	
+	private String auditorName;
 	
 	private String action;
 	
-	private String classname;
+	private String info;
+	
+	private String type;	
 	
 	private String content;
 	
@@ -19,12 +23,20 @@ public class AuditDto extends DtoStringId {
 	
 	private Date entry;
 
-	public String getAuditor() {
-		return auditor;
+	public String getAuditorId() {
+		return auditorId;
 	}
 
-	public void setAuditor(String auditor) {
-		this.auditor = auditor;
+	public void setAuditorId(String auditorId) {
+		this.auditorId = auditorId;
+	}
+
+	public String getAuditorName() {
+		return auditorName;
+	}
+
+	public void setAuditorName(String auditorName) {
+		this.auditorName = auditorName;
 	}
 
 	public String getAction() {
@@ -35,12 +47,20 @@ public class AuditDto extends DtoStringId {
 		this.action = action;
 	}
 
-	public String getClassname() {
-		return classname;
+	public String getInfo() {
+		return info;
 	}
 
-	public void setClassname(String classname) {
-		this.classname = classname;
+	public void setInfo(String info) {
+		this.info = info;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public String getContent() {
@@ -50,7 +70,7 @@ public class AuditDto extends DtoStringId {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	
+
 	public byte[] getBytes() {
 		return bytes;
 	}
@@ -65,6 +85,6 @@ public class AuditDto extends DtoStringId {
 
 	public void setEntry(Date entry) {
 		this.entry = entry;
-	}		
-
+	}
+	
 }
