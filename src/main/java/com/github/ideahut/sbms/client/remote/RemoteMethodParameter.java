@@ -1,10 +1,10 @@
-package com.github.ideahut.sbms.client.dto;
+package com.github.ideahut.sbms.client.remote;
 
 import java.io.Serializable;
 import java.util.Map;
 
 @SuppressWarnings("serial")
-public class RemoteMethodDto implements Serializable {
+public class RemoteMethodParameter implements Serializable {
 	
 	private Map<String, Serializable> attributes;
 	
@@ -16,9 +16,9 @@ public class RemoteMethodDto implements Serializable {
 	
 	private Serializable[] arguments;
 	
-	public RemoteMethodDto() {}
+	public RemoteMethodParameter() {}
 	
-	public RemoteMethodDto(Map<String, Serializable> attributes, Class<?> serviceClass, String methodName, Class<?>[] parameterTypes, Serializable...arguments) {
+	public RemoteMethodParameter(Map<String, Serializable> attributes, Class<?> serviceClass, String methodName, Class<?>[] parameterTypes, Serializable...arguments) {
 		this.attributes = attributes;
 		this.serviceClass = serviceClass;
 		this.methodName = methodName;
@@ -26,15 +26,15 @@ public class RemoteMethodDto implements Serializable {
 		this.arguments = arguments;
 	}
 	
-	public RemoteMethodDto(Class<?> serviceClass, String methodName, Class<?>[] parameterTypes, Serializable...arguments) {
+	public RemoteMethodParameter(Class<?> serviceClass, String methodName, Class<?>[] parameterTypes, Serializable...arguments) {
 		this(null, serviceClass, methodName, parameterTypes, arguments);
 	}
 	
-	public RemoteMethodDto(Map<String, Serializable> attributes, Class<?> serviceClass, String methodName, Serializable...arguments) {
+	public RemoteMethodParameter(Map<String, Serializable> attributes, Class<?> serviceClass, String methodName, Serializable...arguments) {
 		this(attributes, serviceClass, methodName, null, arguments);
 	}
 	
-	public RemoteMethodDto(Class<?> serviceClass, String methodName, Serializable...arguments) {
+	public RemoteMethodParameter(Class<?> serviceClass, String methodName, Serializable...arguments) {
 		this(null, serviceClass, methodName, null, arguments);
 	}
 	
